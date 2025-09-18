@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "docc": "^0.0.1",
+    "docx": "^9.5.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "xlsx": "^0.18.5"

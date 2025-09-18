@@ -1,17 +1,5 @@
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
-import {
-  Document as DocxDocument,
-  Packer,
-  Paragraph,
-  HeadingLevel,
-  Table,
-  TableRow,
-  TableCell,
-  WidthType,
-  TextRun,
-} from "docx";
-
 export default function InfoGeneralInstitucionApp() {
   const [general, setGeneral] = useState({
     nombre: "",
@@ -63,6 +51,7 @@ export default function InfoGeneralInstitucionApp() {
   };
 
   const downloadWord = async () => {
+    const { Document: DocxDocument, Packer, Paragraph, HeadingLevel, Table, TableRow, TableCell, WidthType, TextRun } = await import('docx');
     const title = new Paragraph({
       text: "Información general de la Institución",
       heading: HeadingLevel.TITLE,
@@ -317,11 +306,6 @@ export default function InfoGeneralInstitucionApp() {
         <p>
           Esta interfaz refleja los campos de la "Información general de la Institución" y la tabla final de la actividad
           de línea de tiempo del Módulo Educación y paz.
-        </p>
-        <p>
-          Copyright ©2025
-          Derechos reservados 2025.
-          Autor: ANGEL CUSTODIO PUENTES PEREZ
         </p>
       </footer>
     </div>
